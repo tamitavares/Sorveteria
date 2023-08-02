@@ -1,0 +1,19 @@
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Link whatsapp flutuante no canto esquerdo */
+
+.whatsapp-link{
+    position: fixed;
+    z-index: 200;
+    bottom: 50px;
+    float: right;
+    margin-right: 20px;
+}
+
+.whatsapp-link img{
+    width: 60px;
+    height: 60px;
+}
+

@@ -1,0 +1,58 @@
+<header>
+    <section>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Sorvesonhos</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quem somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Carrinho</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+</header>
+
+<!-- WhatsApp flutuante -->
+<a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=5515981426482" target="_blank">
+    <img src="images/whatsapp-logo.png" alt="WhatsApp">
+</a>
+
+<ul>
+    <span>Tipos de Sorvete: </span>
+    <li *ngFor="let item of sorvetes">
+        {{ item.tipo }}
+        <a [routerLink]="['/sabor', item.tipo]">
+            Saiba mais
+        </a>
+    </li>
+</ul>
+
+<!-- Todos os produtos disponíveis e seus respectivos sabores -->
+<section>
+    <ul>
+        <span>Nossos Sorvetes</span>
+        <li *ngFor="let item of tiposIguais">
+            {{ item.tipo }}
+        </li>
+    </ul>
+</section>
+
+
